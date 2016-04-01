@@ -1,0 +1,9 @@
+
+
+<div><label>Nombre affichés : </label><input type="number" ng-model="limit" /></div>
+<div>{{ date | date : 'EEEE dd MM yyyy' | lowercase }}</div>
+<input type="button" ng-click="precedent()" value="Précédent"  />
+<input type="button" ng-click="suivant()" value="Suivant"  />
+<div>{{ films | limitTo : limit : begin }}</div>
+<br>
+<div>{{gens| orderBy:["nom", "prenom"] }}</div>
